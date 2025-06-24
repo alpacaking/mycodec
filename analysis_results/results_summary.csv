@@ -1,0 +1,17 @@
+model,quantizer_type,config,model_size_estimate,bitrate,pesq_nb,pesq_wb,stoi,composite_score
+fsq_8655,FSQ,levels=8655,Very Small,0.51,1.4529,1.2992,0.4165,1.09587
+rvq_nq4_bins1024_1.5kbps,RVQ,"nq=4.0, bins=1024.0",Small,1.5,2.1016,1.6843,0.8692,1.60669
+rvq_nq8_bins1024_1.5kbps,RVQ,"nq=8.0, bins=1024.0",Medium,1.5,2.1899,1.7069,0.8692,1.64879
+rvq_nq12_bins1024_1.5kbps,RVQ,"nq=12.0, bins=1024.0",Large,1.5,2.0782,1.6963,0.8698,1.60111
+rvq_nq8_bins512_1.5kbps,RVQ,"nq=8.0, bins=512.0",Medium,1.5,2.0334,1.6492,0.8623,1.5668099999999998
+rvq_nq8_bins2048_1.5kbps,RVQ,"nq=8.0, bins=2048.0",Medium,1.5,1.8759,1.5011,0.8459,1.45446
+rvq_nq4_bins1024_3.0kbps,RVQ,"nq=4.0, bins=1024.0",Small,3.0,2.1617,1.729,0.8778,1.6467200000000002
+rvq_nq8_bins1024_3.0kbps,RVQ,"nq=8.0, bins=1024.0",Medium,3.0,2.2016,1.7529,0.887,1.67261
+rvq_nq12_bins1024_3.0kbps,RVQ,"nq=12.0, bins=1024.0",Large,3.0,2.226,1.8214,0.8918,1.7043599999999999
+rvq_nq8_bins512_3.0kbps,RVQ,"nq=8.0, bins=512.0",Medium,3.0,2.1948,1.7807,0.8853,1.6777199999999999
+rvq_nq8_bins2048_3.0kbps,RVQ,"nq=8.0, bins=2048.0",Medium,3.0,2.006,1.6018,0.8699,1.54391
+rvq_nq4_bins1024_6.0kbps,RVQ,"nq=4.0, bins=1024.0",Small,6.0,2.1617,1.729,0.8778,1.6467200000000002
+rvq_nq8_bins1024_6.0kbps,RVQ,"nq=8.0, bins=1024.0",Medium,6.0,2.2029,1.7739,0.8876,1.6796100000000003
+rvq_nq12_bins1024_6.0kbps,RVQ,"nq=12.0, bins=1024.0",Large,6.0,2.261,1.8516,0.8973,1.72907
+rvq_nq8_bins512_6.0kbps,RVQ,"nq=8.0, bins=512.0",Medium,6.0,2.2189,1.8003,0.8888,1.69429
+rvq_nq8_bins2048_6.0kbps,RVQ,"nq=8.0, bins=2048.0",Medium,6.0,2.0177,1.6114,0.872,1.5521

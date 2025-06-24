@@ -1,0 +1,12 @@
+PYTHONPATH=$(pwd) python academicodec/models/encodec/evaluate.py \
+--model_checkpoint_path experiments/librispeech_rvqgan_base/2025-06-13-03-56/latest.pth \
+--test_audio_dir LibriSpeech/test-clean \
+--output_recon_dir "reconstructed_audio/librispeech_rvqgan_base_6kbps" \
+--sr 16000 \
+--target_eval_bandwidth 6.0 \
+--n_filters 32 \
+--D 128 \
+--ratios 8 5 4 2 \
+--target_bandwidths 1.5 3.0 6.0 \
+--bins 1024 \
+--n_q_max 8 # 确保这些参数与训练时一致

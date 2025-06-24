@@ -1,0 +1,17 @@
+bitrate_group,actual_bitrate,metric,best_model,quantizer_type,config,value
+Low (~0.5 kbps),0.51,pesq_nb,fsq_8655,FSQ,levels=8655,1.4529
+Medium (~1.5 kbps),1.5,pesq_nb,rvq_nq8_bins1024_1.5kbps,RVQ,"nq=8.0, bins=1024.0",2.1899
+High (~3.0 kbps),3.0,pesq_nb,rvq_nq12_bins1024_3.0kbps,RVQ,"nq=12.0, bins=1024.0",2.226
+Very High (~6.0 kbps),6.0,pesq_nb,rvq_nq12_bins1024_6.0kbps,RVQ,"nq=12.0, bins=1024.0",2.261
+Low (~0.5 kbps),0.51,pesq_wb,fsq_8655,FSQ,levels=8655,1.2992
+Medium (~1.5 kbps),1.5,pesq_wb,rvq_nq8_bins1024_1.5kbps,RVQ,"nq=8.0, bins=1024.0",1.7069
+High (~3.0 kbps),3.0,pesq_wb,rvq_nq12_bins1024_3.0kbps,RVQ,"nq=12.0, bins=1024.0",1.8214
+Very High (~6.0 kbps),6.0,pesq_wb,rvq_nq12_bins1024_6.0kbps,RVQ,"nq=12.0, bins=1024.0",1.8516
+Low (~0.5 kbps),0.51,stoi,fsq_8655,FSQ,levels=8655,0.4165
+Medium (~1.5 kbps),1.5,stoi,rvq_nq12_bins1024_1.5kbps,RVQ,"nq=12.0, bins=1024.0",0.8698
+High (~3.0 kbps),3.0,stoi,rvq_nq12_bins1024_3.0kbps,RVQ,"nq=12.0, bins=1024.0",0.8918
+Very High (~6.0 kbps),6.0,stoi,rvq_nq12_bins1024_6.0kbps,RVQ,"nq=12.0, bins=1024.0",0.8973
+Low (~0.5 kbps),0.51,composite_score,fsq_8655,FSQ,levels=8655,1.09587
+Medium (~1.5 kbps),1.5,composite_score,rvq_nq8_bins1024_1.5kbps,RVQ,"nq=8.0, bins=1024.0",1.64879
+High (~3.0 kbps),3.0,composite_score,rvq_nq12_bins1024_3.0kbps,RVQ,"nq=12.0, bins=1024.0",1.7043599999999999
+Very High (~6.0 kbps),6.0,composite_score,rvq_nq12_bins1024_6.0kbps,RVQ,"nq=12.0, bins=1024.0",1.72907

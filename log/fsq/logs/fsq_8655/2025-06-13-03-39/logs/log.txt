@@ -1,0 +1,22 @@
+2025-06-13-03-39: using tensorboard
+2025-06-13-03-39: Using LibriSpeech dataset
+2025-06-13-03-39: Build optimizers and lr-schedulers
+2025-06-13-03-39: <epoch:0, iter:100, total_loss_g:512.0018, adv_g_loss:0.9971, feat_loss:0.0708, rec_loss:512.0018, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-40: <epoch:0, iter:200, total_loss_g:367.6873, adv_g_loss:0.9971, feat_loss:0.0430, rec_loss:367.6873, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-41: <epoch:0, iter:300, total_loss_g:344.9584, adv_g_loss:0.9971, feat_loss:0.0487, rec_loss:344.9584, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-42: <epoch:0, iter:400, total_loss_g:334.6257, adv_g_loss:0.9971, feat_loss:0.0532, rec_loss:334.6257, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-42: <epoch:0, iter:500, total_loss_g:391.0129, adv_g_loss:0.9971, feat_loss:0.0519, rec_loss:391.0129, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-43: <epoch:0, iter:600, total_loss_g:446.2428, adv_g_loss:0.9971, feat_loss:0.0495, rec_loss:446.2428, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-44: <epoch:0, iter:700, total_loss_g:345.5830, adv_g_loss:0.9971, feat_loss:0.0331, rec_loss:345.5830, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-45: <epoch:0, iter:800, total_loss_g:344.3899, adv_g_loss:0.9971, feat_loss:0.0298, rec_loss:344.3899, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-45: <epoch:0, iter:900, total_loss_g:324.5817, adv_g_loss:0.9971, feat_loss:0.0489, rec_loss:324.5817, commit_loss:0.0000, loss_d:0.0000, d_weight: 1.0000>
+2025-06-13-03-46: <epoch:0, iter:1000, total_loss_g:424.9542, adv_g_loss:0.9970, feat_loss:0.0478, rec_loss:423.8616, commit_loss:0.0000, loss_d:2.0000, d_weight: 1.0000>
+2025-06-13-03-47: <epoch:0, iter:1100, total_loss_g:394.4565, adv_g_loss:1.1295, feat_loss:0.1478, rec_loss:393.0314, commit_loss:0.0000, loss_d:1.8708, d_weight: 1.0000>
+2025-06-13-03-48: <epoch:0, iter:1200, total_loss_g:415.4638, adv_g_loss:1.2549, feat_loss:0.2223, rec_loss:413.7643, commit_loss:0.0000, loss_d:1.8765, d_weight: 1.0000>
+2025-06-13-03-48: <epoch:0, iter:1300, total_loss_g:399.9608, adv_g_loss:1.4331, feat_loss:0.3832, rec_loss:397.7612, commit_loss:0.0000, loss_d:1.6082, d_weight: 1.0000>
+2025-06-13-03-49: <epoch:0, iter:1400, total_loss_g:342.5511, adv_g_loss:1.5730, feat_loss:0.3809, rec_loss:340.2162, commit_loss:0.0000, loss_d:1.4781, d_weight: 1.0000>
+2025-06-13-03-50: <epoch:0, iter:1500, total_loss_g:412.4808, adv_g_loss:1.9577, feat_loss:0.4541, rec_loss:409.6149, commit_loss:0.0000, loss_d:1.2164, d_weight: 1.0000>
+2025-06-13-03-51: <epoch:0, iter:1600, total_loss_g:401.4064, adv_g_loss:1.9708, feat_loss:0.4897, rec_loss:398.4562, commit_loss:0.0000, loss_d:1.1014, d_weight: 1.0000>
+2025-06-13-03-51: <epoch:0, iter:1700, total_loss_g:588.6289, adv_g_loss:1.9910, feat_loss:0.3730, rec_loss:585.8918, commit_loss:0.0000, loss_d:1.1680, d_weight: 1.0000>
+2025-06-13-03-52: <epoch:0, iter:1800, total_loss_g:450.8720, adv_g_loss:2.3598, feat_loss:0.5143, rec_loss:447.4836, commit_loss:0.0000, loss_d:1.2565, d_weight: 1.0000>
+2025-06-13-03-53: <epoch:0, iter:1900, total_loss_g:345.1580, adv_g_loss:1.5616, feat_loss:0.4958, rec_loss:342.6048, commit_loss:0.0000, loss_d:1.5803, d_weight: 1.0000>

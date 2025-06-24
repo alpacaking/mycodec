@@ -1,0 +1,27 @@
+CUDA_VISIBLE_DEVICES=1 \
+PYTHONPATH=$(pwd)  python \
+academicodec/models/encodec/main_launch.py \
+--local_rank 0 \
+--dataset_type librispeech \
+--librispeech_root_dir "./LibriSpeech" \
+--librispeech_train_subset "train-clean-100" \
+--librispeech_valid_subset "dev-clean" \
+--sr 16000 \
+--segment_duration_secs 1.5 \
+--BATCH_SIZE 8 \
+--N_EPOCHS 40 \
+--PATH "./experiments/librispeech_rvqgan_rqv4" \
+--save_dir "./runs/librispeech_rvqgan_rqv4" \
+--n_filters 32 \
+--D 128 \
+--ratios 8 5 4 2 \
+--target_bandwidths 1.5 3.0 6.0 \
+--bins 1024 \
+--n_q_max 4 \
+--LAMBDA_COM 0.25 \
+--LAMBDA_FEAT 2.0 \
+--LAMBDA_ADV 1.0 \
+--LAMBDA_REC 1.0 \
+--print_freq 100 \
+--tensorboard 
+# --resume --resume_path "experiments/librispeech_rvqgan_base" # 如果需要继续训练
