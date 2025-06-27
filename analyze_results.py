@@ -427,8 +427,8 @@ def create_summary_table(df, output_dir):
     return summary, best_df
 
 def main():
-    results_dir = "/home/chenkuangwei/chenkuangwei_nfs_data/rvqgan/codec/evaluation_results"
-    output_dir = "/home/chenkuangwei/chenkuangwei_nfs_data/rvqgan/codec/analysis_results"
+    results_dir = "/home/chenkuangwei/chenkuangwei_nfs_data/rvqgan/mycodec/evaluation_results"
+    output_dir = "/home/chenkuangwei/chenkuangwei_nfs_data/rvqgan/mycodec/analysis_results"
     os.makedirs(output_dir, exist_ok=True)
     
     # Extract results

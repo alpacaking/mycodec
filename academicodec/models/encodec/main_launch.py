@@ -95,14 +95,14 @@ def get_args():
         default=1000, # Encodec 论文中判别器在1000步后开始训练，但这里的实现是判别器损失权重在1000步后生效
         help='Iteration to start applying discriminator loss weight fully')
     parser.add_argument(
-        '--BATCH_SIZE', type=int, default=8, help='batch size per GPU') # 调整为你GPU能承受的大小
+        '--BATCH_SIZE', type=int, default=8, help='batch size per GPU') # 调整为GPU能承受的大小
     parser.add_argument(
-        '--PATH', type=str, default='experiments/my_rvqgan_codec', help='model save path') # 修改为你希望的路径
+        '--PATH', type=str, default='experiments/my_rvqgan_codec', help='model save path') # 修改为希望的路径
     parser.add_argument('--sr', type=int, default=16000, help='sample rate')
     parser.add_argument(
         '--print_freq', type=int, default=100, help='the print number of iterations') # 调整打印频率
     parser.add_argument(
-        '--save_dir', type=str, default='runs', help='tensorboard log save path') # 修改为你希望的路径
+        '--save_dir', type=str, default='runs', help='tensorboard log save path') 
     
     # --- 数据集路径修改 ---
     parser.add_argument(
@@ -274,7 +274,7 @@ def main_worker(local_rank, args):
             sample_rate=args.sr,
             segment_length_secs=args.segment_duration_secs # 验证时也可以用固定长度或完整长度
         )
-        # args.sr = train_dataset.sample_rate # 确保 args.sr 与数据集一致，尽管我们已经通过参数设置了
+        # args.sr = train_dataset.sample_rate
     elif args.dataset_type == 'nsynth':
         logger.log_info('Using NSynth dataset')
         train_dataset = NSynthDataset(audio_dir=os.path.expanduser(args.nsynth_train_data_path))
@@ -312,7 +312,6 @@ def main_worker(local_rank, args):
         mpd = DDP(mpd,
                   device_ids=[args.local_rank],
                   find_unused_parameters=find_unused_parameters)
-    # 这里之后需要看下 sr 的问题，如果输入 wav 的 sr 和 `--sr` 不一致则会有问题
     # logger.log_info('Training set')
     # train_dataset = LibriSpeechDataset(root_dir="/path/to/LibriSpeech", sample_rate=args.sr, subset="train-clean-100")
     # # train_dataset = NSynthDataset(audio_dir=args.train_data_path)
@@ -346,7 +345,6 @@ def main_worker(local_rank, args):
     # --- 优化器和学习率调度器 ---
     # Encodec 论文使用 AdamW，beta1=0.9, beta2=0.95, weight_decay=0.1
     # 学习率初始为 1e-4, 预热1000步，然后余弦衰减
-    # 这里的实现是 ExponentialLR，你可以根据需要调整或替换为更复杂的调度器
     optimizer_g = torch.optim.AdamW(
         soundstream.parameters(), lr=1e-4, betas=(0.9, 0.95), weight_decay=0.1) # 更新超参数
     lr_scheduler_g = torch.optim.lr_scheduler.ExponentialLR(
@@ -374,13 +372,10 @@ def main_worker(local_rank, args):
             args.global_step = latest_info.get('global_step', 0) # 恢复 global_step
 
             # 加载模型状态
-            # 处理 DDP 可能添加的 'module.' 前缀
             def load_state_dict_flexible(model, state_dict):
-                # 如果 state_dict 来自 DDP 模型而当前模型不是，则移除 'module.'
                 if not isinstance(model, DDP) and all(key.startswith('module.') for key in state_dict):
                     new_state_dict = {k[7:]: v for k, v in state_dict.items()}
                     model.load_state_dict(new_state_dict)
-                # 如果 state_dict 不是来自 DDP 模型而当前模型是，则添加 'module.' (较少见，通常 DDP 保存时已处理)
                 elif isinstance(model, DDP) and not all(key.startswith('module.') for key in state_dict):
                     new_state_dict = {'module.' + k: v for k, v in state_dict.items()}
                     model.load_state_dict(new_state_dict)
